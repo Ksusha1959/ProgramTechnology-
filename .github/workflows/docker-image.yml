@@ -7,12 +7,22 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Шаг 1: Переходим в папку сервиса, чтобы Docker нашел Dockerfile и контекст
+    - name: Set working directory
+      run: cd catalog_service
+
+    # Шаг 2: Сборка образа именно для сервиса каталога
+    - name: Build the Catalog Service image
+      run: |
+        docker build ./catalog_service --file ./catalog_service/Dockerfile --tag my-library-catalog:$(date +%s)
+
+    # Шаг             3: (Опционально) Проверка, что образ создался
+    - name: Verify Image
+      run: docker images
