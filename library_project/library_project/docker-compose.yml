@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  # Сервис базы данных
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: catalog_db
+    ports:
+      - "5432:5432"
+
+  # Ваш сервис с кодом
+  catalog-service:
+    build: ./catalog_service
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://user:pass@db:5432/catalog_db
+    depends_on:
+      - db
