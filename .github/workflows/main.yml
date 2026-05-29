@@ -1,0 +1,25 @@
+name: Docker Build and Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Мы указываем Docker, что нужно собирать именно сервис из папки
+    - name: Build Catalog Service
+      run: |
+        docker build ./catalog_service \
+          --file ./catalog_service/Dockerfile \
+          --tag ksusha/catalog-service:${{ github.sha }}
+
+    - name: Verify Image
+      run: docker images
