@@ -1,7 +1,7 @@
-using NotesService.ValueObjects.Base;
-using NotesService.ValueObjects.Validators;
+using My_librery.ValueObjects.Base;
+using My_librery.ValueObjects.Validators;
 
-namespace NotesService.ValueObjects;
+namespace My_librery.ValueObjects;
 
 
 public class Tittle(string name) : ValueObject<string>(new TittleValidator(), name);
