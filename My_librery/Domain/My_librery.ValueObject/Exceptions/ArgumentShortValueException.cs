@@ -1,4 +1,4 @@
-namespace NotesService.ValueObjects.Exceptions;
+namespace My_librery.ValueObjects.Exceptions;
 
 public class ArgumentShortValueException(string paramName, string value, int minLength)
 : FormatException($"The \"{paramName}\" length {value} less than minimum allowed length {minLength}")
