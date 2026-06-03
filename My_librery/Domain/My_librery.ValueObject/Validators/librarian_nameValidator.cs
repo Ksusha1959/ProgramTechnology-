@@ -3,13 +3,26 @@ using My_librery.ValueObjects.Exceptions;
 
 namespace My_librery.ValueObjects.Validators;
 
-   
-    public class librarian_nameValidator : IValidator<string>
+public class librarian_nameValidator : IValidator<string>
 {
+ 
     
+    public static int MAX_LENGTH => 30;
+
+    
+    
+    public static int MIN_LENGTH => 2;
+
+   
     public void Validate(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
             throw new ArgumentNullOrWhiteSpaceException(nameof(value));
+
+        if (value.Length > MAX_LENGTH)
+            throw new ArgumentLongValueException(nameof(value),value, MAX_LENGTH);
+
+        if (value.Length < MIN_LENGTH)
+            throw new ArgumentShortValueException(nameof(value), value, MIN_LENGTH);
     }
 }
