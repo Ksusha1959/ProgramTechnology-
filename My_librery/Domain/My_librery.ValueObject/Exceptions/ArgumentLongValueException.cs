@@ -1,4 +1,4 @@
-namespace NotesService.ValueObjects.Exceptions;
+namespace My_librery.ValueObjects.Exceptions;
 
 public class ArgumentLongValueException(string paramName, string value,int maxLength)
 : FormatException($"The \"{paramName}\" length {value} greater than maximum allowed length {maxLength}")
