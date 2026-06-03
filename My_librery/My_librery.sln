@@ -8,13 +8,13 @@ ProjectSection(SolutionItems) = preProject
 EndProjectSection
 EndProject
 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary.Domain", "Domain\MyLibrary.Domain\MyLibrary.Domain.csproj", "{B2C3D4E5-F6A7-48B9-C0D1-E2F3A4B5C6D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My_library.Domain", "Domain\MyLibrary.Domain\My_library.Domain.csproj", "{B2C3D4E5-F6A7-48B9-C0D1-E2F3A4B5C6D7}"
 EndProject
 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary.ValueObjects", "Domain\MyLibrary.ValueObjects\MyLibrary.ValueObjects.csproj", "{C3D4E5F6-A7B8-49C9-D0E1-F2A3B4C5D6E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My_library.ValueObjects", "Domain\My_library.ValueObjects\My_library.ValueObjects.csproj", "{C3D4E5F6-A7B8-49C9-D0E1-F2A3B4C5D6E7}"
 EndProject
 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLibrary.Domain.Repositories.Abstractions", "Domain\MyLibrary.Domain.Repositories.Abstractions\MyLibrary.Domain.Repositories.Abstractions.csproj", "{D4E5F6A7-B8C9-40D0-E1F2-A3B4C5D6E7F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My_library.Domain.Repositories.Abstractions", "Domain\My_library.Domain.Repositories.Abstractions\My_library.Domain.Repositories.Abstractions.csproj", "{D4E5F6A7-B8C9-40D0-E1F2-A3B4C5D6E7F8}"
 EndFProject
 
 Global
